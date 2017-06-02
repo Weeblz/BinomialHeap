@@ -1,0 +1,610 @@
+Computer Security and Cryptography
+Software Theory
+Artificial Intelligence
+Mobile and Internet Computing
+Web Design
+Robotics
+Data Mining
+Computer Architecture
+Theory of computation
+Computer Graphics
+
+Wesley Preater
+82.4
+Delhi
+India
+Theory of computation
+
+Ileana Gordy
+91.0
+Jakarta
+Indonesia
+Robotics
+
+Myron Maclean
+100.0
+Dongguan
+China
+Artificial Intelligence
+
+Gus Holbrook
+54.2
+Hanoi
+Vietnam
+Web Design
+
+Titus Colombi
+96.6
+Madrid
+Spain
+Computer Graphics
+
+Dagmar Prisco
+96.5
+Santiago
+Chile
+Software Theory
+
+Dominique Kelliher
+88.1
+Ahmedabad
+India
+Computer Architecture
+
+Lizzy Ghilardi
+32.0
+Mexico City
+Mexico
+Web Design
+
+Laurie Hanselman
+99.5
+Pyongyang
+North Korea
+Computer Graphics
+
+Austin Koch
+94.4
+Pune
+India
+Computer Security and Cryptography
+
+Georgy Mcclure
+75.0
+Abidjan Ivory
+Coast
+Mobile and Internet Computing
+
+Amelita Brenton
+85.7
+Ho Chi Minh City
+Vietnam
+Artificial Intelligence
+
+Hymie Shipp
+84.1
+Berlin
+Germany
+Theory of computation
+
+Merilyn Muto
+55.9
+Johannesburg
+South Africa
+Theory of computation
+
+Anatollo Auguste
+58.0
+Ankara
+Turkey
+Data Mining
+
+Bonnie Devine
+83.0
+Jaipur
+India
+Computer Graphics
+
+Zach Kuo
+70.1
+Surat
+India
+Web Design
+
+Aubrie Katayama
+90.9
+Busan
+South Korea
+Computer Architecture
+
+Care Wiebold
+79.9
+Alexandria
+Egypt
+Computer Graphics
+
+Gloriane Byatt
+97.7
+Ahmedabad
+India
+Software Theory
+
+Taddeusz Jaffee
+100.0
+Tokyo
+Japan
+Computer Graphics
+
+Evonne Puterman
+94.5
+Santiago
+Chile
+Artificial Intelligence
+
+Joshia Bennell
+99.1
+Madrid
+Spain
+Computer Graphics
+
+Ivan Eltsin
+42.0
+Saint Petersburg
+Russia
+Computer Graphics
+
+Melynda Culbert
+8.80202
+Bybush
+Swyncastle
+Theory of computation
+
+Lizabeth Archuleta
+55.2966
+Janhall
+Liechtenstein
+Mobile and Internet Computing
+
+Elvie Karns
+1.44745
+Snowfog
+Madagascar
+Software Theory
+
+Vanetta Munro
+1.28704
+Bridgeedge
+Tibet
+Mobile and Internet Computing
+
+Crystle Mckeighan
+92.549
+Byedge
+Saint Kitts and Nevis
+Computer Architecture
+
+Tyisha Stockwell
+19.2024
+Deepview
+Barbados
+Computer Architecture
+
+Katherine Stich
+33.718
+Floweredge
+South Africa
+Theory of computation
+
+Chery Grable
+48.0571
+Clearview
+Macau
+Web Design
+
+Cary Hubble
+19.2268
+Ironden
+New Caledonia
+Software Theory
+
+Inga Segura
+66.3649
+Summermallow
+Austria
+Robotics
+
+Janyce Hutcherson
+11.6356
+Wildespring
+Sierra Leone
+Artificial Intelligence
+
+Luella Delgiudice
+47.1
+Foxhurst
+Western Sahara
+Data Mining
+
+Lawerence Harps
+4.13216
+Starryfall
+Ukraine
+Software Theory
+
+Kacie Broder
+86.0074
+Greydale
+St. Helena
+Data Mining
+
+Herman Nelson
+98.5483
+Lochgate
+Faroe Islands
+Theory of computation
+
+Rolf Fino
+26.2149
+Eastmaple
+Guam
+Mobile and Internet Computing
+
+Quyen Quon
+76.0026
+Strongbank
+Monaco
+Web Design
+
+Monty Orwig
+83.2936
+Redacre
+Djibouti
+Robotics
+
+William Adolphsen
+58.0299
+Fairbell
+Thailand
+Data Mining
+
+Ilda Ackles
+43.4246
+Icebank
+Samoa (American Samoa)
+Theory of computation
+
+Jarrod Gingerich
+98.4385
+Greyfog
+Tunisia
+Artificial Intelligence
+
+Barrie Noggle
+54.2612
+Grasswall
+Vietnam
+Computer Security and Cryptography
+
+Erna Buehler
+97.2675
+Faysea
+Uruguay
+Data Mining
+
+Luke Thibault
+4.13377
+Woodborough
+Congo
+Software Theory
+
+Tegan Kirst
+96.2701
+Shadehedge
+Somalia
+Computer Security and Cryptography
+
+Alycia Cohan
+10.7245
+Wildebell
+Iraq
+Computer Security and Cryptography
+
+Corie Gilmer
+62.6964
+Bluewick
+Zimbabwe
+Theory of computation
+
+Winter Tuner
+65.1783
+Fallwald
+Czech Republic
+Artificial Intelligence
+
+Sheena Ballow
+88.4824
+Springgold
+Palestina
+Computer Architecture
+
+Leonel Leisinger
+6.83313
+Havenlyn
+Belgium
+Data Mining
+
+Loralee Mashburn
+65.8459
+Wheathollow
+Greece
+Artificial Intelligence
+
+Mitchel Mizer
+43.6266
+Oldgate
+Burkina Faso
+Computer Graphics
+
+Catalina Kahl
+73.3432
+Esteroak
+Iran
+Artificial Intelligence
+
+Delmer Thor
+28.4512
+Dracbush
+Gambia
+Web Design
+
+Nobuko Ussery
+29.7713
+Shoreport
+Algeria
+Web Design
+
+Warner Cornett
+38.6398
+Byfair
+United Arab Emirates
+Theory of computation
+
+Candida Volz
+39.9062
+Aelston
+Guyane
+Theory of computation
+
+Sylvie Adrian
+97.7367
+Freylea
+French Polynesia
+Theory of computation
+
+Marco Cavanaugh
+90.4275
+Oldash
+Slovakia
+Theory of computation
+
+Merrie Antes
+91.9901
+Deephurst
+USA
+Web Design
+
+Gerry Mui
+83.5203
+Silverbank
+Sweden
+Artificial Intelligence
+
+Dreama Sievers
+70.545
+Stonegate
+Senegal
+Data Mining
+
+Ezequiel Thurgood
+88.0192
+Freynesse
+Germany
+Computer Security and Cryptography
+
+Francesco Placek
+96.2342
+Corcoast
+France
+Robotics
+
+Heike Enz
+41.2287
+Vertmage
+Pakistan
+Computer Graphics
+
+Latoyia Lauder
+73.1211
+Icebell
+French Guayana
+Computer Architecture
+
+Devon Callaham
+46.3857
+Draclake
+Puerto Rico
+Computer Graphics
+
+Natalia Reese
+89.7096
+Coldwater
+Mali
+Robotics
+
+Amelia Elamin
+68.9133
+Ironview
+Central African Republic
+Web Design
+
+Fidel Hunter
+81.6328
+Buttermarble
+Poland
+Mobile and Internet Computing
+
+May Chamorro
+22.0013
+Westholt
+Bhutan
+Mobile and Internet Computing
+
+Lawrence Burger
+31.5658
+Violetbutter
+Aruba
+Mobile and Internet Computing
+
+Jesenia Britain
+91.3964
+Mapleholt
+Georgia
+Theory of computation
+
+Aleida Hixon
+52.1051
+Lightley
+Zambia
+Theory of computation
+
+Erin Sutherlin
+47.8904
+Westerwolf
+Latvia
+Software Theory
+
+Carie Vanwinkle
+17.7586
+Deepwind
+Guadeloupe
+Artificial Intelligence
+
+Luci Francisco
+17.931
+Stonefield
+Yemen
+Web Design
+
+Arletta Nazzaro
+84.7532
+Vertby
+Papau New Guinea
+Software Theory
+
+Terra Wool
+44.5865
+Mallowmeadow
+Palau
+Artificial Intelligence
+
+Adrien Beckler
+99.2083
+Stonecoast
+Solomon Islands
+Artificial Intelligence
+
+Alina Hack
+4.68639
+Greymont
+Cyprus
+Computer Graphics
+
+Eva Sumner
+44.7668
+Goldwald
+Laos
+Computer Architecture
+
+Shasta Decastro
+14.9126
+Snowspell
+Ecuador
+Web Design
+
+Laureen Christine
+67.0123
+Byoak
+Brazil
+Artificial Intelligence
+
+Lang Boatman
+80.4148
+Springmoor
+Democratic Republic Kongo
+Artificial Intelligence
+
+Darnell Brierly
+41.7901
+Havenpond
+Reunion
+Computer Architecture
+
+Cristal Winston
+25.62
+Highbridge
+Ethiopia
+Robotics
+
+Eloy Belser
+25.3396
+Westsilver
+Costa Rica
+Mobile and Internet Computing
+
+Drema Rinaldi
+49.1979
+Marshcastle
+Lithuania
+Web Design
+
+Tyra Theodore
+95.6244
+Westcrest
+Panama
+Artificial Intelligence
+
+Iva Weese
+14.0177
+Westmallow
+Marshall Islands
+Computer Graphics
+
+Antione Caperton
+97.2174
+Landlake
+Togo
+Mobile and Internet Computing
+
+Noah Mcnabb
+2.491
+Snowvale
+Guinea-Bissau
+Software Theory
+
+Les Foster
+85.5538
+Springcourt
+Nigeria
+Theory of computation
+
+Minta Mcglone
+44.1336
+Bayvale
+Bolivia
+Software Theory
+
+Karena Revard
+73.498
+Ericoast
+Jordan
+Software Theory
