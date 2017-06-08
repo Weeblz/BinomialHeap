@@ -43,18 +43,20 @@ public:
 	Node() : key(nullptr), degree(0), fellow(nullptr), parent(nullptr), child(nullptr) {}
 	Node(student* key) : key(key), degree(0), fellow(nullptr), parent(nullptr), child(nullptr) {}
 	student* getKey() { return key; }
+	Node* getFellow() { return fellow; }
+	Node* getChild() { return child; }
 };
 
 class BHeap {
-	Node* roots;
+	std::vector<Node*> roots;
 	Node* min;
 	void linkTrees(Node*, Node*);
-	Node* mergeRoots(BHeap*, BHeap*);
+	std::vector<Node*> mergeRoots(BHeap*, BHeap*);
 
 public:
-	BHeap() : roots(nullptr) {}
-	BHeap(Node* x) : roots(x) {}
-	bool isEmpty() { return !roots; }
+	BHeap() : roots(0) {}
+	BHeap(Node* x) : roots(0) { roots.push_back(x); }
+	bool isEmpty() { return !roots.size(); }
 	void insert(Node* x) { merge(new BHeap(x)); }
 	void merge(BHeap*);
 	Node* first();
@@ -62,7 +64,33 @@ public:
 	void decreaseKey(Node*, int);
 	void Delete(Node*);
 	Node* getMin() { return min; }
+	Node* getFirstRoot() { return roots[0]; }
+	void show();
 };
+
+std::vector<Node*> construct(Node* a) {
+	std::vector<Node*> ret;
+	Node* temp = a;
+	while (temp) {
+		ret.push_back(temp);
+		temp = temp->getFellow();
+	}
+	return ret;
+}
+
+void treeShow(Node* root, int lvl) {
+	if (!root) return;
+	std::cout << "level " << lvl << "   " << root->getKey()->name << "   " << root->getKey()->rating << std::endl;
+	if(lvl!=1) treeShow(root->getFellow(), lvl);
+	treeShow(root->getChild(), lvl + 1);
+}
+
+void BHeap::show() {
+	for (int i = 0; i < this->roots.size(); i++) {
+		std::cout << i + 1 << " binomial tree:\n" << std::endl;
+		treeShow(roots[i], 1);
+	}
+}
 
 void BHeap::linkTrees(Node* y, Node* z) {
 	// Precondition: y -> key >= z -> key
@@ -72,53 +100,60 @@ void BHeap::linkTrees(Node* y, Node* z) {
 	z->degree = z->degree + 1;
 }
 
-Node* BHeap::mergeRoots(BHeap *x, BHeap *y) {
-	Node *ret = new Node();
-	Node *end = ret;
+std::vector<Node*> BHeap::mergeRoots(BHeap *x, BHeap *y) {
+	std::vector<Node*> ret;
+	Node *end = new Node();
 
-	Node *L = x->roots;
-	Node *R = y->roots;
-	if (L == nullptr) return R;
-	if (R == nullptr) return L;
-	while (L != nullptr || R != nullptr) {
-		if (L == nullptr) {
-			end->fellow = R;
+	std::vector<Node*> L = x->roots;
+	std::vector<Node*> R = y->roots;
+	if (x->isEmpty()) return R;
+	if (y->isEmpty()) return L;
+	Node* left = L[0];
+	Node* right = R[0];
+
+	while (left != nullptr || right != nullptr) {
+		if (left == nullptr) {
+			ret.push_back(right);
+			end->fellow = right;
 			end = end->fellow;
-			R = R->fellow;
+			right = right->fellow;
 		}
-		else if (R == nullptr) {
-			end->fellow = L;
+		else if (right == nullptr) {
+			ret.push_back(left);
+			end->fellow = left;
 			end = end->fellow;
-			L = L->fellow;
+			left = left->fellow;
 		}
 		else {
-			if (L->degree < R->degree) {
-				end->fellow = L;
+			if (left->degree < right->degree) {
+				ret.push_back(left);
+				end->fellow = left;
 				end = end->fellow;
-				L = L->fellow;
+				left = left->fellow;
 			}
 			else {
-				end->fellow = R;
+				ret.push_back(right);
+				end->fellow = right;
 				end = end->fellow;
-				R = R->fellow;
+				right = right->fellow;
 			}
 		}
 	}
-	return (ret->fellow);
+	return ret;
 }
 
 void BHeap::merge(BHeap *bh) {
 	BHeap *H = new BHeap();
 	H->roots = mergeRoots(this, bh);
 
-	if (H->roots == nullptr) {
-		this->roots = nullptr;
+	if (H->isEmpty()) {
+		this->roots = std::vector<Node*>(0);
 		this->min = nullptr;
 		return;
 	}
 
 	Node *prevX = nullptr;
-	Node *x = H->roots;
+	Node *x = H->getFirstRoot();
 	Node *nextX = x->fellow;
 	while (nextX != nullptr) {
 		if (x->degree != nextX->degree || (nextX->fellow != nullptr && nextX->fellow->degree == x->degree)) {
@@ -130,7 +165,7 @@ void BHeap::merge(BHeap *bh) {
 			linkTrees(nextX, x);
 		}
 		else {
-			if (prevX == nullptr) H->roots = nextX;
+			if (prevX == nullptr) H->roots = construct(nextX);
 			else prevX->fellow = nextX;
 			linkTrees(x, nextX);
 			x = nextX;
@@ -139,8 +174,8 @@ void BHeap::merge(BHeap *bh) {
 	}
 
 	this->roots = H->roots;
-	this->min = H->roots;
-	Node *cur = this->roots;
+	this->min = H->getFirstRoot();
+	Node *cur = this->getFirstRoot();
 	while (cur != nullptr) {
 		if (cur->key->rating < this->min->key->rating) this->min = cur;
 		cur = cur->fellow;
@@ -152,16 +187,17 @@ Node* BHeap::first() {
 }
 
 Node* BHeap::extractMin() {
+	if (this->isEmpty()) return nullptr;
 	Node *ret = this->first();
 
 	// delete ret from the list of roots
 	Node *prevX = nullptr;
-	Node *x = this->roots;
+	Node *x = this->getFirstRoot();
 	while (x != ret) {
 		prevX = x;
 		x = x->fellow;
 	}
-	if (prevX == nullptr) this->roots = x->fellow;
+	if (prevX == nullptr) this->roots.erase(this->roots.begin());
 	else prevX->fellow = x->fellow;
 
 	// reverse the list of ret's children
@@ -176,7 +212,7 @@ Node* BHeap::extractMin() {
 
 	// merge the two lists
 	BHeap *H = new BHeap();
-	H->roots = revChd;
+	H->roots.push_back(revChd);
 	this->merge(H);
 
 	return ret;
@@ -239,12 +275,15 @@ int main() {
 		getline(in, temp);
 	}
 
-	heap->getMin()->getKey()->show();
+	heap->show();
 	heap->extractMin();
-	heap->getMin()->getKey()->show();
+	heap->show();
+
+	/*heap->getMin()->getKey()->show();
+	heap->extractMin();
+	heap->getMin()->getKey()->show();*/
 
 
 	system("pause");
     return 0;
 }
-
