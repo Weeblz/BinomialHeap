@@ -43,6 +43,8 @@ public:
 	Node() : key(nullptr), degree(0), fellow(nullptr), parent(nullptr), child(nullptr) {}
 	Node(student* key) : key(key), degree(0), fellow(nullptr), parent(nullptr), child(nullptr) {}
 	student* getKey() { return key; }
+	Node* getFellow() { return fellow; }
+	Node* getChild() { return child; }
 };
 
 class BHeap {
@@ -62,7 +64,26 @@ public:
 	void decreaseKey(Node*, int);
 	void Delete(Node*);
 	Node* getMin() { return min; }
+	void show();
 };
+
+void treeShow(Node* root, int lvl) {
+	if (!root) return;
+	std::cout << "level " << lvl << "   " << root->getKey()->name << "   " << root->getKey()->rating << std::endl;
+	if(lvl!=1) treeShow(root->getFellow(), lvl);
+	treeShow(root->getChild(), lvl + 1);
+}
+
+void BHeap::show() {
+	Node* current = roots;
+	int i = 1;
+	while (current) {
+		std::cout << "\ntree number " << i << ":\n" << std::endl;
+		treeShow(current, 1);
+		current = current->getFellow();
+		i++;
+	}
+}
 
 void BHeap::linkTrees(Node* y, Node* z) {
 	// Precondition: y -> key >= z -> key
@@ -239,10 +260,15 @@ int main() {
 		getline(in, temp);
 	}
 
-	heap->getMin()->getKey()->show();
+	/*heap->getMin()->getKey()->show();
 	heap->extractMin();
-	heap->getMin()->getKey()->show();
+	heap->getMin()->getKey()->show();*/
 
+	heap->show();
+	heap->extractMin();
+	heap->show();
+	heap->extractMin();
+	heap->show();
 
 	system("pause");
     return 0;
